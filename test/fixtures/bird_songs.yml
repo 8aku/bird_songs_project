@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  audio_file: MyString
+  country: one
+  bird: one
+  license: one
+  provider: one
+  type: one
+
+two:
+  audio_file: MyString
+  country: two
+  bird: two
+  license: two
+  provider: two
+  type: two
