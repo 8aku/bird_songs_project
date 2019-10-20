@@ -1,0 +1,6 @@
+<h1>Birdsongs#index</h1>
+
+<% @birds.each do |bird| %>
+<p><%= bird.common_name %></p>
+<%= link_to 'BirdSong Information', bird %>
+<% end %>

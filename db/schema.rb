@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_06_224045) do
+ActiveRecord::Schema.define(version: 2019_10_19_230754) do
 
   create_table "bird_songs", force: :cascade do |t|
     t.string "audio_file"
@@ -21,9 +21,13 @@ ActiveRecord::Schema.define(version: 2019_10_06_224045) do
     t.integer "type_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "locations_id"
+    t.integer "location_id"
     t.index ["bird_id"], name: "index_bird_songs_on_bird_id"
     t.index ["country_id"], name: "index_bird_songs_on_country_id"
     t.index ["license_id"], name: "index_bird_songs_on_license_id"
+    t.index ["location_id"], name: "index_bird_songs_on_location_id"
+    t.index ["locations_id"], name: "index_bird_songs_on_locations_id"
     t.index ["provider_id"], name: "index_bird_songs_on_provider_id"
     t.index ["type_id"], name: "index_bird_songs_on_type_id"
   end
@@ -51,9 +55,9 @@ ActiveRecord::Schema.define(version: 2019_10_06_224045) do
   create_table "locations", force: :cascade do |t|
     t.decimal "latitude"
     t.decimal "longitude"
-    t.integer "country_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "country_id"
     t.index ["country_id"], name: "index_locations_on_country_id"
   end
 
@@ -64,7 +68,7 @@ ActiveRecord::Schema.define(version: 2019_10_06_224045) do
   end
 
   create_table "types", force: :cascade do |t|
-    t.string "type"
+    t.string "type_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -74,5 +78,4 @@ ActiveRecord::Schema.define(version: 2019_10_06_224045) do
   add_foreign_key "bird_songs", "licenses"
   add_foreign_key "bird_songs", "providers"
   add_foreign_key "bird_songs", "types"
-  add_foreign_key "locations", "countries"
 end

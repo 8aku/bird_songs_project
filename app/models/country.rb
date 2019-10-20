@@ -1,4 +1,5 @@
 class Country < ApplicationRecord
-	has_many :locations
 	has_many :birdsongs
+
+	validates :country, uniqueness: true
 end

@@ -1,0 +1,7 @@
+<h1>Birdsongs#index</h1>
+
+<% @birdsongs.each do |birdsong| %>
+<p><%= birdsong.bird.common_name %></p>
+<p>imagine an embedded audio player: <%= birdsong.audio_file %></p>
+<%= link_to 'BirdSong Information', birdsong_path(birdsong) %>
+<% end %>
