@@ -1,0 +1,8 @@
+<nav>
+	<ul><p><%= link_to 'Home', root_path %></p></ul>
+	<ul><p><%= link_to 'About', about_index_path %></p></ul>
+</nav>
+
+<h1><%= @location.country.country %></h1>
+<h2>Latitude: <%= @location.latitude %></h2>
+<h2>Longitude: <%= @location.longitude %></h2>

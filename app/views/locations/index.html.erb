@@ -1,4 +1,8 @@
-<h1>Location#index</h1>
+<nav>
+	<ul><p><%= link_to 'Home', root_path %></p></ul>
+	<ul><p><%= link_to 'About', about_index_path %></p></ul>
+</nav>
+
 <% @locations.each do |location| %>
 <p><%= location.country.country %></p>
 <p><%= location.latitude %></p>

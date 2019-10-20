@@ -1,0 +1,43 @@
+<nav>
+	<ul><p><%= link_to 'Home', root_path %></p></ul>
+	<ul><p><%= link_to 'About', about_index_path %></p></ul>
+</nav>
+
+<h1>Tables</h1>
+<h3><%= link_to 'BirdSong', birdsongs_path %></h3>
+Contains the bird song .flac.
+Forgein keys for the country where it was recorded, the type of recording, and license and provider information.
+The license and provider do not seem to necessarily have a relationship so I did not link those tables.
+
+<h3><%= link_to 'Bird', birds_path %></h3>
+English common name, genus and species.
+
+<h3><%= link_to 'Type', types_path %></h3>
+The type of bird song (mating, danger warning, etc).
+
+<h3><%= link_to 'Provider', providers_path %></h3>
+Who provided the bird song audio file. I've done some research and I'm not sure if the provider is associated with the license - I originally thought there was a one-to-many (one license, many providers) relationship.
+
+<h3><%= link_to 'License', licenses_path %></h3>
+The license for the bird song audio file.
+
+<h3><%= link_to 'Country', countries_path %></h3>
+Country of recording.
+Forgein key for Location.
+
+<h3><%= link_to 'Location', locations_path %></h3>
+GPS location of recording.
+
+
+<h1>Data sources</h1>
+<p>
+	Bird Song Data: sourced from <a href="https://www.kaggle.com/rtatman/british-birdsong-dataset">Kegel</a>. This dataset contains information and recordings of different bird songs from species that can be found in Britain. The set includes a CSV and a folder of flacs. The CSV contains the corresponding flac file ID, the genus and species, the common name and country of origin, the latitude and longitude of the country of origin, the bird song type, who provided the recording, and the distribution license.
+</p>
+
+<p>
+	Country Data: sourced from <a href="https://www.searchify.ca/list-of-countries">Searchify</a>. This is a simple list of all the countries in thr world. I used this to populate my Country table.
+</p>
+
+<p>
+	Provider Name Data: made with Faker. Maybe i'll think of something better.
+</p>

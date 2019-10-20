@@ -60,15 +60,15 @@ song = BirdSong.create(
 end
 
 
-#country_csv_file = Rails.root + 'db/country-keyword-list.csv'
+country_csv_file = Rails.root + 'db/country-keyword.csv'
 
-#countries = SmarterCSV.process(country_csv_file)
+countries = SmarterCSV.process(country_csv_file)
 
-#countries.each do |country|
-   #country = Country.create(
-      #country: country)
-   #country.save
-#end
+countries.each do |country|
+   country = Country.create(
+      country: country)
+   country.save
+end
 
   20.times do
    fake_provider = Provider.create(

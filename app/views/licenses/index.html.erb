@@ -3,6 +3,6 @@
 	<ul><p><%= link_to 'About', about_index_path %></p></ul>
 </nav>
 
-<% @birdsongs.each do |birdsong| %>
-<p><%= link_to birdsong.audio_file, birdsong_path(birdsong) %></p>
+<% @licenses.each do |license| %>
+	<p><%= license.license_url %></p>
 <% end %>
