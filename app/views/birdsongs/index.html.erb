@@ -3,6 +3,12 @@
 	<ul><p><%= link_to 'About', about_index_path %></p></ul>
 </nav>
 
+<%= form_tag url_for(:controller => 'birdsongs', :action => 'index'), :method => 'get' do %>
+<%= select_tag(:category, options_for_select(@birdsongs.reflect_on_all_associations(:belongs_to).map(&:name))) %>
+	<%= text_field_tag :search %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
 <% @birdsongs.each do |birdsong| %>
 <p><%= link_to birdsong.audio_file, birdsong_path(birdsong) %></p>
 <% end %>

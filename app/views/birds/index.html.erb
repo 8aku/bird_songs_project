@@ -3,11 +3,6 @@
 	<ul><p><%= link_to 'About', about_index_path %></p></ul>
 </nav>
 
-<%= form_tag url_for(:controller => 'birds', :action => 'index'), :method => 'get' do %>
-	<%= text_field_tag :search %>
-  <%= submit_tag 'Search', name: nil %>
-<% end %>
-
 <% @birds.each do |bird| %>
 <p><%= link_to bird.common_name, bird %></p>
 <% end %>

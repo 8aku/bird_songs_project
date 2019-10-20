@@ -12,4 +12,5 @@
 <p><%= @birdsong.license.license_url %></p>
 <p><%= @birdsong.provider.provider_name %></p>
 
-<p><%= link_to 'Back', bird_path(@birdsong.bird) %></p>
+<p><%= link_to 'More from this bird...', bird_path(@birdsong.bird) %></p>
+<p><%= link_to 'Back', birdsongs_path %></p>
