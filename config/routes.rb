@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'licenses/index'
-  get 'providers/index'
-  get 'types/index'
-  get 'about/index'
   	resources :birds, only: %i[index show]
 	resources :birdsongs, only: %i[index show]
 	resources :locations, only: %i[index show]
