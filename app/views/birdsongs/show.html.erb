@@ -3,6 +3,7 @@
 	<ul><p><%= link_to 'About', about_index_path %></p></ul>
 </nav>
 
+<p><%= @birdsong.bird.common_name %></p>
 <p><%= @birdsong.audio_file %></p>
 <p><%= @birdsong.country.country %></p>
 <p><%= @birdsong.location.latitude %></p>

@@ -8,4 +8,7 @@ class BirdSong < ApplicationRecord
 
   validates :audio_file, :bird, :license, presence: true
   validates :audio_file, uniqueness: true
+
+  paginates_per 15
+  
 end

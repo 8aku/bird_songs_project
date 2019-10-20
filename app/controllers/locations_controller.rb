@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   def index
-  	@locations = Location.all
+  	@locations = Location.all.page params[:page]
   end
 
   def show

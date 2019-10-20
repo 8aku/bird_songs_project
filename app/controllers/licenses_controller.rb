@@ -1,5 +1,5 @@
 class LicensesController < ApplicationController
   def index
-  	@licenses = License.all
+  	@licenses = License.order(:license_url).page params[:page]
   end
 end

@@ -6,3 +6,5 @@
 <% @birds.each do |bird| %>
 <p><%= link_to bird.common_name, bird %></p>
 <% end %>
+
+<%= paginate @birds %> 

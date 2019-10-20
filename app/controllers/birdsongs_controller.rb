@@ -1,6 +1,6 @@
 class BirdsongsController < ApplicationController
   def index
-  	@birdsongs = BirdSong.all
+  	@birdsongs = BirdSong.order(:audio_file).page params[:page]
   end
 
   def show

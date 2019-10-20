@@ -6,3 +6,5 @@
 <% @licenses.each do |license| %>
 	<p><%= license.license_url %></p>
 <% end %>
+
+<%= paginate @licenses %> 

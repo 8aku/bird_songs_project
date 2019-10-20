@@ -6,3 +6,5 @@
 <% @birdsongs.each do |birdsong| %>
 <p><%= link_to birdsong.audio_file, birdsong_path(birdsong) %></p>
 <% end %>
+
+<%= paginate @birdsongs %> 

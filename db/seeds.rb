@@ -66,7 +66,7 @@ countries = SmarterCSV.process(country_csv_file)
 
 countries.each do |country|
    country = Country.create(
-      country: country)
+      country: country[:name])
    country.save
 end
 

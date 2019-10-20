@@ -1,6 +1,6 @@
 class BirdsController < ApplicationController
   def index
-  	@birds = Bird.all
+  	@birds = Bird.order(:common_name).page params[:page]
   end
 
   def show

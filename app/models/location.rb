@@ -4,4 +4,7 @@ class Location < ApplicationRecord
 	 
   validates :longitude, :latitude, presence: true
   validates :longitude, :latitude, uniqueness: true
+
+  paginates_per 15
+  
 end
