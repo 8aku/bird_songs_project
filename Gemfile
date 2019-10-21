@@ -44,7 +44,7 @@ group :development do
   gem 'faker'
   gem 'kaminari'
   gem 'openlayers-rails'
-  gem 'bootstrap', '~> 4.0.0'
+  gem 'bootstrap-sass', '3.3.7'
   gem 'sprockets-rails', :require => 'sprockets/railtie'
 end
 
