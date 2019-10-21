@@ -43,6 +43,9 @@ group :development do
   gem 'smarter_csv'
   gem 'faker'
   gem 'kaminari'
+  gem 'openlayers-rails'
+  gem 'bootstrap', '~> 4.0.0'
+  gem 'sprockets-rails', :require => 'sprockets/railtie'
 end
 
 group :test do
