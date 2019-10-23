@@ -23,6 +23,7 @@ class BirdsongsController < ApplicationController
      @birdsongs = BirdSong.order(:audio_file).page params[:page]
    end
  end
+ 
  def show
    @birdsong = BirdSong.find(params[:id])
  end
