@@ -3,6 +3,7 @@
   <h3>Species: <%= @bird.species %></h3>
  <h4>Audio Samples</h4>
 <% @bird.bird_songs.each do |song| %>
-  <p><%= song.audio_file %></p>
   <p><%= link_to "Song Information", birdsong_path(song) %></p>
+
+  <button id="song_button" data-file="/songs/xc<%= song.audio_file %>.flac.wav">PLAY ME</button>
 <% end %>
